@@ -30,15 +30,16 @@ const AdminDashboard = () => {
     const fetchData = async () => {
         setLoading(true);
         const token = localStorage.getItem('adminToken');
+        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
         const config = {
             headers: { Authorization: `Bearer ${token}` }
         };
 
         try {
             const [submissionsRes, testimonialsRes, statsRes] = await Promise.all([
-                axios.get('http://localhost:5000/api/admin/submissions', config),
-                axios.get('http://localhost:5000/api/testimonials'),
-                axios.get('http://localhost:5000/api/admin/stats', config)
+                axios.get(`${apiUrl}/api/admin/submissions`, config),
+                axios.get(`${apiUrl}/api/testimonials`),
+                axios.get(`${apiUrl}/api/admin/stats`, config)
             ]);
 
             setSubmissions(submissionsRes.data);
@@ -67,8 +68,9 @@ const AdminDashboard = () => {
         if (!window.confirm("Are you sure you want to delete this testimonial?")) return;
 
         const token = localStorage.getItem('adminToken');
+        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000';
         try {
-            await axios.delete(`http://localhost:5000/api/admin/testimonials/${id}`, {
+            await axios.delete(`${apiUrl}/api/admin/testimonials/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             fetchData();
