@@ -1,8 +1,8 @@
-_legacy_backup/
-_legacy_backup_final/
 node_modules/
+dist/
 .env
 *.sqlite
 *.db
-dist/
-client/dist/
+_legacy_backup/
+_legacy_backup_final/
+.DS_Store

@@ -1,7 +1,33 @@
 {
-    "name": "premium-gym-root",
+    "name": "premium-gym-client",
     "private": true,
+    "version": "0.0.0",
+    "type": "module",
     "scripts": {
-        "build": "cd client && npm install && npm run build"
+        "dev": "vite",
+        "build": "vite build",
+        "lint": "eslint .",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "axios": "^1.6.0",
+        "framer-motion": "^10.16.4",
+        "lucide-react": "^0.562.0",
+        "react": "^18.2.0",
+        "react-countup": "^6.5.3",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.12.0",
+        "react-router-dom": "^6.18.0",
+        "react-scroll": "^1.9.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.37",
+        "@types/react-dom": "^18.2.15",
+        "@vitejs/plugin-react": "^4.2.0",
+        "eslint": "^8.53.0",
+        "eslint-plugin-react": "^7.33.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.4",
+        "vite": "^5.0.0"
     }
 }
