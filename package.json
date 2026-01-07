@@ -1,14 +1,7 @@
 {
-    "name": "premium-gym",
-    "version": "1.0.0",
+    "name": "premium-gym-root",
     "private": true,
     "scripts": {
-        "install": "cd client && npm install",
-        "build": "cd client && npm run build",
-        "dev": "cd client && npm run dev",
-        "preview": "cd client && npm run preview"
-    },
-    "workspaces": [
-        "client"
-    ]
+        "build": "cd client && npm install && npm run build"
+    }
 }
