@@ -18,10 +18,10 @@
 
 3. **Configure Project Settings**
    - **Framework Preset**: Vite
-   - **Root Directory**: `./` (leave as root)
-   - **Build Command**: `cd client && npm install && npm run build`
-   - **Output Directory**: `client/dist`
-   - **Install Command**: `cd client && npm install`
+   - **Root Directory**: `client`  <-- **IMPORTANT: Click "Edit" and change to "client"**
+   - **Build Command**: `npm run build` (Default)
+   - **Output Directory**: `dist` (Default)
+   - **Install Command**: `npm install` (Default)
 
 4. **Environment Variables** (if needed)
    - Add any environment variables from your `.env` file
@@ -41,11 +41,10 @@
 
 ### Troubleshooting
 
-If you encounter a 404 error:
-1. Check that the build command is correct
-2. Verify the output directory is set to `client/dist`
-3. Ensure `vercel.json` is in the root directory
-4. Check that all dependencies are listed in `client/package.json`
+If you encounter errors:
+1. **Ensure Root Directory is `client`**: Go to Settings > General > Root Directory and set it to `client`.
+2. **Check Build Output**: Ensure `client/dist` is being created locally with `npm run build`.
+3. **Clean Cache**: If redeploying, try "Redeploy with unchecking 'Use existing build setup'".
 
 ### Local Testing
 
