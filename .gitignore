@@ -2,3 +2,5 @@ _legacy_backup/
 _legacy_backup_final/
 node_modules/
 .env
+*.sqlite
+*.db
